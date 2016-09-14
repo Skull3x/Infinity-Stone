@@ -27,8 +27,22 @@ class Main extends PluginBase implements Listener {
     if($b->getX() == $this->getConfig()->get("")) {
       if($b->getY() == $this->getConfig()->get("")) {
         if($b->getZ() == $this->getConfig()->get("")) {
+          $n = rand(1,4);
+          switch($n) {
+            case 1:
+              // set drops to be 3 iron ore
+            break;
+            case 2:
+              // set drops to be 3 gold ore
+            break;
+            case 3:
+              // set drops to be 1 diamond unless silk touched
+            break;
+            case 4:
+              // set drops to be 1 emerald unless silk touched
+            break;
+          }
           $this->setCancelled();
-          //TODO randomizer for drops
         }
       }
     }
